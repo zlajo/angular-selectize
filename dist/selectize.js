@@ -9,6 +9,7 @@ angular.module('selectize', []).value('selectizeConfig', {}).directive("selectiz
     require: '^ngModel',
     scope: { ngModel: '=', config: '=?', options: '=?', ngDisabled: '=', ngRequired: '&' },
     link: function(scope, element, attrs, modelCtrl) {
+      element = jQuery(element);
 
       Selectize.defaults.maxItems = null; //default to tag editor
 
